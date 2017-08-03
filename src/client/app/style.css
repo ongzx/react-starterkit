@@ -1,15 +1,56 @@
+:root {
+    --red: #d33;
+    --fontSize: 32px;
+    --mainColor: #f1f1f1;
+    --mobileMainColor: #000;
+    --centered: {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@custom-media --small-viewport (max-width: 30em);
+
+body {
+    background-color: var(--mainColor);
+}
+
+.centered {
+    @apply --centered;
+}
+
 .likeButton {
     padding: 20px;
     border: 1px solid #ccc;
     color:#aaa;
-    font-size: 18px;
+    font-size: var(--fontSize);
     border-radius: 12px;
     background: #f1f1f1;
+}
+
+.likeButton {
     
+    &.hover {
+        background: #ff0000;
+        color: color(var(--red) a(54%));
+    }
 }
 
 .buttonWrapper {
     width: 300px;
     height: 200px;
     border: 1px solid #ccc;
+}
+
+.flexContainer {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@media (--small-viewport) {
+    body {
+        background-color: var(--mobileMainColor);
+    }
+
 }

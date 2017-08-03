@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.css';
+import cx from 'classnames';
 
 class AwesomeComponent extends React.Component {
     constructor(props) {
@@ -21,12 +22,17 @@ class AwesomeComponent extends React.Component {
         return (
             <div>
                 Likes: <span>{this.state.likesCount}</span>
-                <div className={styles.buttonWrapper}>
+                <div className={cx(styles.buttonWrapper, styles.centered)}>
                     <button 
                         className={styles.likeButton} 
                         onClick={this.onLike}>
                         Like Me
                     </button>
+                </div>
+                <div className={styles.flexContainer}>
+                    <div className={[styles.flexChild, styles.child1]} />
+                    <div className={[styles.flexChild, styles.child2]} />
+                    <div className={[styles.flexChild, styles.child3]} />
                 </div>
             </div>
         )

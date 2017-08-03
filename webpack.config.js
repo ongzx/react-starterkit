@@ -34,23 +34,12 @@ var config = {
                             options: { 
                                 modules: true, 
                                 importLoaders: 1,
-                                localIdentName: '[path]___[name]__[local]___[hash:base64:5]'
+                                localIdentName: '[name]__[local]___[hash:base64:5]'
                             }
                         },
                         'postcss-loader',
                     ]
                 })
-                //     'style-loader',
-                //     combineLoaders([
-                //         {
-                //             loader: 'css-loader',
-                //             query: {
-                //                 modules: true,
-                //                 localIdentName: '[name]__[local]__[hash:base64:5]'
-                //             }
-                //         }
-                //     ])
-                // )
             }
         ]
     },
@@ -61,16 +50,16 @@ var config = {
         port: 8082,
         watchContentBase: true
     },
+    output: {
+        path: BUILD_DIR,
+        filename: '[name].bundle.js'
+    },
     plugins: [ 
         new ExtractTextPlugin( '[name].bundle.css'),
         HtmlWebpackConfig,
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin()
-    ],
-    output: {
-        path: BUILD_DIR,
-        filename: '[name].bundle.js'
-    },
+    ]
 };
 
 module.exports = config;
