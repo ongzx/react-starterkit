@@ -19,7 +19,7 @@ var config = {
     module: {
         loaders: [
             {
-                test: /\.jsx$/,
+                test: /\.jsx?$/,
                 include: APP_DIR,
                 loaders: ['react-hot-loader','babel-loader'],
                 exclude: /node_modules/
@@ -42,6 +42,9 @@ var config = {
                 })
             }
         ]
+    },
+    resolve: {
+        extensions: [".js", ".jsx"]
     },
     devServer: {
         contentBase: APP_DIR,

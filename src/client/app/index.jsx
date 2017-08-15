@@ -1,13 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import AwesomeComponent from './AwesomeComponent.jsx';
+import Navbar from './components/Navbar';
+import styles from './style.css';
 
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <p>Hello React!</p>
-                <AwesomeComponent />
+            <div className={styles.root}>
+                <Navbar />
             </div>
         )
     }
