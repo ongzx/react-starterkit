@@ -21,8 +21,8 @@
   "homepage": "https://github.com/ongzx/rn-starterkit#readme",
   "dependencies": {
     "classnames": "^2.2.5",
-    "material-ui": "^0.19.4",
-    "material-ui-icons": "^1.0.0-beta.17",
+    "material-ui": "^1.0.0-beta.17",
+    "material-ui-icons": "^1.0.0-alpha.19",
     "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

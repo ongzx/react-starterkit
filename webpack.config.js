@@ -21,7 +21,7 @@ var config = {
             {
                 test: /\.jsx?$/,
                 include: APP_DIR,
-                loaders: ['react-hot-loader','babel-loader'],
+                loaders: ['react-hot-loader/webpack','babel-loader?presets[]=react'],
                 exclude: /node_modules/
             },
             {
@@ -47,7 +47,7 @@ var config = {
         extensions: [".js", ".jsx"]
     },
     devServer: {
-        contentBase: APP_DIR,
+        contentBase: BUILD_DIR,
         hot: true,
         compress: true,
         port: 8082,

@@ -79,7 +79,7 @@ class Navbar extends React.Component {
                         <MenuIcon />
                     </IconButton>
                     <Typography type="title" color="inherit" className={styles.flex}>
-                        RN
+                        RN Start
                     </Typography>
                     <Button color="contrast">Login</Button>
                 </Toolbar>
